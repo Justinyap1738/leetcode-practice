@@ -1,0 +1,7 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        val_ind = {}
+        for i, num in enumerate(nums):
+            if target - num in val_ind:
+                return[i, val_ind[target - num]]
+            val_ind[num] = i
